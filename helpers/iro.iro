@@ -27,7 +27,7 @@ file_extensions []     = 4ml;
 ## Constants
 ################################################################
 
-__KEYWORDS \= \b(system|machine|ensures|requires|conforms|includes|returns|some|at|initially|next|property|boot|new|inj|sur|fun|any|sub|bij)
+__KEYWORDS \= \b(system|machine|ensures|requires|conforms|includes|returns|some|at|initially|next|property|boot|new|inj|sur|fun|any|sub|bij|is)
 
 ################################################################
 ## Styles
@@ -60,7 +60,7 @@ styles [] {
 .punctuation : style {
    color     = red_2
    ace_scope             = punctuation
-   textmate_scope        = punctuation
+   textmate_scope        = punctuation.separator.delimiter
    pygments_scope        = Punctuation
 }
 
@@ -81,8 +81,8 @@ styles [] {
 
 .logicalOperator : style {
    color                 = orange
-   ace_scope             = keyword.operator.logical
-   textmate_scope        = keyword.operator
+   ace_scope             = keyword.operator
+   textmate_scope        = keyword.operator.logical
    pygments_scope        = Keyword
 }
 
@@ -180,11 +180,31 @@ main : context {
    : inline_push {
       regex \= (returns)
       styles [] = .keyword;
-      default_style = .text
       : pop {
          regex \= (\))
          styles [] = .punctuation;
       }
+      
+      : inline_push {
+         regex \= ([(])
+         styles [] = .punctuation;
+         default_style = .text
+         : pop {
+            regex \= (\b)
+            styles [] = .punctuation;
+         }
+      }
+      
+      : inline_push {
+         regex \= ([:][:])
+         styles [] = .punctuation;
+         default_style = .text
+         : pop {
+            regex \= (\w[\w\d]+)
+            styles [] = .keyword;
+         }
+      }
+      
    }
    
    : inline_push {
@@ -254,8 +274,12 @@ expression : context {
          styles [] = .assignmentOperator;
       }
       : pattern {
-         regex \= (!=)
+         regex \= (!=|>=?|<=?)
          styles [] = .logicalOperator;
+      }
+      : pattern {
+         regex          \= $${__KEYWORDS}
+         styles []       = .keyword;
       }
       : pattern {
          regex \= (\w+[\w\d]*)
@@ -265,10 +289,7 @@ expression : context {
          regex \= ([,|])
          styles [] = .punctuation;
       }
-      : pattern {
-         regex          \= $${__KEYWORDS}
-         styles []       = .keyword;
-      }
+      
       : include "list";
    }
 }
