@@ -20,7 +20,7 @@
 ##
 ################################################################
 
-name                   = Formula2
+name                   = formula2
 file_extensions []     = 4ml;
 
 ################################################################
@@ -46,7 +46,7 @@ styles [] {
 .keyword : style {
    color     = cyan
    ace_scope             = keyword
-   textmate_scope        = keyword
+   textmate_scope        = keyword.other.special-method
    pygments_scope        = Keyword
 }
 
@@ -79,10 +79,17 @@ styles [] {
    pygments_scope        = Generic.Error
 }
 
-.operator : style {
+.logicalOperator : style {
+   color                 = orange
+   ace_scope             = keyword.operator.logical
+   textmate_scope        = keyword.operator
+   pygments_scope        = Keyword
+}
+
+.assignmentOperator : style {
    color                 = orange
    ace_scope             = keyword.operator
-   textmate_scope        = keyword.operator
+   textmate_scope        = keyword.operator.assignment
    pygments_scope        = Keyword
 }
 
@@ -243,8 +250,12 @@ expression : context {
          styles [] = .punctuation;
       }
       : pattern {
-         regex \= ([:]{2}=|\+|[:]-|!=)
-         styles [] = .operator;
+         regex \= ([:]{2}=|\+|[:]-)
+         styles [] = .assignmentOperator;
+      }
+      : pattern {
+         regex \= (!=)
+         styles [] = .logicalOperator;
       }
       : pattern {
          regex \= (\w+[\w\d]*)

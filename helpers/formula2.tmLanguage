@@ -8,7 +8,7 @@
     <string>4ml</string>
    </array>
   <key>name</key>
-  <string>Formula2</string>
+  <string>formula2</string>
   <key>patterns</key>
   <array> 
     <dict>
@@ -17,7 +17,7 @@
     </dict>
    </array>
   <key>scopeName</key>
-  <string>source.Formula2</string>
+  <string>source.formula2</string>
   <key>uuid</key>
   <string></string>
   <key>repository</key>
@@ -38,7 +38,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -55,7 +55,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -63,7 +63,7 @@
           <key>match</key>
           <string>(;)</string>
           <key>name</key>
-          <string>punctuation.Formula2</string>
+          <string>punctuation.formula2</string>
         </dict>
         <dict>
           <key>begin</key>
@@ -73,11 +73,11 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
           <key>contentName</key>
-          <string>text.Formula2</string>
+          <string>text.formula2</string>
           <key>end</key>
           <string>(\&quot;)</string>
           <key>endCaptures</key>
@@ -85,7 +85,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -97,7 +97,7 @@
           <key>match</key>
           <string>(//.*)</string>
           <key>name</key>
-          <string>comment.Formula2</string>
+          <string>comment.formula2</string>
         </dict>
         <dict>
           <key>begin</key>
@@ -107,7 +107,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.other.special-method.Formula2</string>
+              <string>keyword.other.special-method.formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -124,7 +124,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -136,7 +136,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.other.special-method.Formula2</string>
+              <string>keyword.other.special-method.formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -153,7 +153,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -165,7 +165,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.other.special-method.Formula2</string>
+              <string>keyword.other.special-method.formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -182,7 +182,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -194,11 +194,11 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.other.special-method.Formula2</string>
+              <string>keyword.other.special-method.formula2</string>
             </dict>
           </dict>
           <key>contentName</key>
-          <string>text.Formula2</string>
+          <string>text.formula2</string>
           <key>end</key>
           <string>(\))</string>
           <key>endCaptures</key>
@@ -206,7 +206,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -218,7 +218,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.other.special-method.Formula2</string>
+              <string>keyword.other.special-method.formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -235,7 +235,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -247,7 +247,7 @@
           <key>match</key>
           <string>([^\s])</string>
           <key>name</key>
-          <string>invalid.Formula2</string>
+          <string>invalid.formula2</string>
         </dict>
        </array>
     </dict>
@@ -263,7 +263,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>text.Formula2</string>
+              <string>text.formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -280,7 +280,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -292,27 +292,33 @@
       <array> 
         <dict>
           <key>match</key>
-          <string>([\x{003a}]{2}=|\+|[\x{003a}]-|!=)</string>
+          <string>([\x{003a}]{2}=|\+|[\x{003a}]-)</string>
           <key>name</key>
-          <string>keyword.operator.Formula2</string>
+          <string>keyword.operator.assignment.formula2</string>
+        </dict>
+        <dict>
+          <key>match</key>
+          <string>(!=)</string>
+          <key>name</key>
+          <string>keyword.operator.formula2</string>
         </dict>
         <dict>
           <key>match</key>
           <string>(\w+[\w\d]*)</string>
           <key>name</key>
-          <string>text.Formula2</string>
+          <string>text.formula2</string>
         </dict>
         <dict>
           <key>match</key>
           <string>([\x{002c}\x{007c}])</string>
           <key>name</key>
-          <string>punctuation.Formula2</string>
+          <string>punctuation.formula2</string>
         </dict>
         <dict>
           <key>match</key>
           <string>\b(system|machine|ensures|requires|conforms|includes|returns|some|at|initially|next|property|boot|new|inj|sur|fun|any|sub|bij)</string>
           <key>name</key>
-          <string>keyword.other.special-method.Formula2</string>
+          <string>keyword.other.special-method.formula2</string>
         </dict>
         <dict>
           <key>include</key>
@@ -332,7 +338,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -349,7 +355,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -367,11 +373,11 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
           <key>contentName</key>
-          <string>text.Formula2</string>
+          <string>text.formula2</string>
           <key>end</key>
           <string>(\w+)</string>
           <key>endCaptures</key>
@@ -379,7 +385,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.other.special-method.Formula2</string>
+              <string>keyword.other.special-method.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -391,11 +397,11 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
           <key>contentName</key>
-          <string>text.Formula2</string>
+          <string>text.formula2</string>
           <key>end</key>
           <string>(\w+)</string>
           <key>endCaptures</key>
@@ -403,7 +409,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.other.special-method.Formula2</string>
+              <string>keyword.other.special-method.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -411,7 +417,7 @@
           <key>match</key>
           <string>(,)</string>
           <key>name</key>
-          <string>punctuation.Formula2</string>
+          <string>punctuation.formula2</string>
         </dict>
        </array>
     </dict>
@@ -451,7 +457,7 @@
           <key>match</key>
           <string>(extends|model|of|includes)</string>
           <key>name</key>
-          <string>keyword.other.special-method.Formula2</string>
+          <string>keyword.other.special-method.formula2</string>
         </dict>
        </array>
     </dict>
@@ -463,7 +469,7 @@
           <key>match</key>
           <string>(atleast|atmost)</string>
           <key>name</key>
-          <string>keyword.other.special-method.Formula2</string>
+          <string>keyword.other.special-method.formula2</string>
         </dict>
        </array>
     </dict>
@@ -491,7 +497,7 @@
           <key>match</key>
           <string>(no)</string>
           <key>name</key>
-          <string>keyword.other.special-method.Formula2</string>
+          <string>keyword.other.special-method.formula2</string>
         </dict>
         <dict>
           <key>include</key>
@@ -511,11 +517,11 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>comment.Formula2</string>
+              <string>comment.formula2</string>
             </dict>
           </dict>
           <key>contentName</key>
-          <string>comment.Formula2</string>
+          <string>comment.formula2</string>
           <key>end</key>
           <string>(\*/)</string>
           <key>endCaptures</key>
@@ -523,7 +529,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>comment.Formula2</string>
+              <string>comment.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -543,7 +549,7 @@
           <key>match</key>
           <string>(\b\d+)</string>
           <key>name</key>
-          <string>constant.numeric.Formula2</string>
+          <string>constant.numeric.formula2</string>
         </dict>
        </array>
     </dict>
@@ -559,7 +565,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -576,7 +582,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>punctuation.Formula2</string>
+              <string>punctuation.formula2</string>
             </dict>
           </dict>
         </dict>
@@ -590,13 +596,13 @@
           <key>match</key>
           <string>(no|is)</string>
           <key>name</key>
-          <string>keyword.other.special-method.Formula2</string>
+          <string>keyword.other.special-method.formula2</string>
         </dict>
         <dict>
           <key>match</key>
           <string>([\x{007c}])</string>
           <key>name</key>
-          <string>punctuation.Formula2</string>
+          <string>punctuation.formula2</string>
         </dict>
         <dict>
           <key>include</key>

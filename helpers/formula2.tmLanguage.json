@@ -9,7 +9,7 @@
     }
   ],
   "scopeName": "source.formula2",
-  "uuid": "4aca15d3-1347-46bd-b94a-e61f0d833f58",
+  "uuid": "",
   "repository": {
     "main": {
       "patterns": [
@@ -188,7 +188,7 @@
       "patterns": [
         {
           "match": "([\\x{003a}]{2}=|\\+|[\\x{003a}]-)",
-          "name": "keyword.operator.assignment.formula2"
+          "name": "keyword.operator.assingment.formula2"
         },
         {
           "match": "(!=)",
