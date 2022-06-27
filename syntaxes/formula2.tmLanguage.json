@@ -2,13 +2,13 @@
   "fileTypes": [
     "4ml"
   ],
-  "name": "Formula2",
+  "name": "formula2",
   "patterns": [
     {
       "include": "#main"
     }
   ],
-  "scopeName": "source.Formula2",
+  "scopeName": "source.formula2",
   "uuid": "4aca15d3-1347-46bd-b94a-e61f0d833f58",
   "repository": {
     "main": {
@@ -20,7 +20,7 @@
           "begin": "(\\{)",
           "beginCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           },
           "patterns": [
@@ -31,26 +31,26 @@
           "end": "(\\})",
           "endCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           }
         },
         {
           "match": "(;)",
-          "name": "punctuation.Formula2"
+          "name": "punctuation.formula2"
         },
         {
           "begin": "(\\\")",
           "beginCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           },
-          "contentName": "text.Formula2",
+          "contentName": "text.formula2",
           "end": "(\\\")",
           "endCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           }
         },
@@ -59,13 +59,13 @@
         },
         {
           "match": "(//.*)",
-          "name": "comment.Formula2"
+          "name": "comment.formula2"
         },
         {
           "begin": "(domain|partial|model)",
           "beginCaptures": {
             "1": {
-              "name": "keyword.Formula2"
+              "name": "keyword.other.special-method.formula2"
             }
           },
           "patterns": [
@@ -76,7 +76,7 @@
           "end": "($)",
           "endCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           }
         },
@@ -84,7 +84,7 @@
           "begin": "(requires)",
           "beginCaptures": {
             "1": {
-              "name": "keyword.Formula2"
+              "name": "keyword.other.special-method.formula2"
             }
           },
           "patterns": [
@@ -95,7 +95,7 @@
           "end": "(\\.)",
           "endCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           }
         },
@@ -103,7 +103,7 @@
           "begin": "(transform)",
           "beginCaptures": {
             "1": {
-              "name": "keyword.Formula2"
+              "name": "keyword.other.special-method.formula2"
             }
           },
           "patterns": [
@@ -114,7 +114,7 @@
           "end": "($)",
           "endCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           }
         },
@@ -122,14 +122,14 @@
           "begin": "(returns)",
           "beginCaptures": {
             "1": {
-              "name": "keyword.Formula2"
+              "name": "keyword.other.special-method.formula2"
             }
           },
-          "contentName": "text.Formula2",
+          "contentName": "text.formula2",
           "end": "(\\))",
           "endCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           }
         },
@@ -137,7 +137,7 @@
           "begin": "(conforms)",
           "beginCaptures": {
             "1": {
-              "name": "keyword.Formula2"
+              "name": "keyword.other.special-method.formula2"
             }
           },
           "patterns": [
@@ -148,7 +148,7 @@
           "end": "(\\.)",
           "endCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           }
         },
@@ -157,7 +157,7 @@
         },
         {
           "match": "([^\\s])",
-          "name": "invalid.Formula2"
+          "name": "invalid.formula2"
         }
       ]
     },
@@ -167,7 +167,7 @@
           "begin": "(\\b\\w[\\w\\d]*\\b)",
           "beginCaptures": {
             "1": {
-              "name": "text.Formula2"
+              "name": "text.formula2"
             }
           },
           "patterns": [
@@ -178,7 +178,7 @@
           "end": "(\\.)",
           "endCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           }
         }
@@ -187,20 +187,20 @@
     "expression__1": {
       "patterns": [
         {
-          "match": "([\\x{003a}]{2}=|\\+|[\\x{003a}]-|!=)",
-          "name": "keyword.operator.Formula2"
+          "match": "([:]{2}=|\\+|[:]-|!=)",
+          "name": "keyword.operator.formula2"
         },
         {
           "match": "(\\w+[\\w\\d]*)",
-          "name": "text.Formula2"
+          "name": "text.formula2"
         },
         {
-          "match": "([\\x{002c}\\x{007c}])",
-          "name": "punctuation.Formula2"
+          "match": "([,|])",
+          "name": "punctuation.formula2"
         },
         {
           "match": "\\b(system|machine|ensures|requires|conforms|includes|returns|some|at|initially|next|property|boot|new|inj|sur|fun|any|sub|bij)",
-          "name": "keyword.Formula2"
+          "name": "keyword.other.special-method.formula2"
         },
         {
           "include": "#list"
@@ -213,7 +213,7 @@
           "begin": "(\\()",
           "beginCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           },
           "patterns": [
@@ -224,7 +224,7 @@
           "end": "(\\))",
           "endCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           }
         }
@@ -233,38 +233,38 @@
     "list__1": {
       "patterns": [
         {
-          "begin": "([\\x{003a}]{2}\\s+)",
+          "begin": "([:]{2}\\s+)",
           "beginCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           },
-          "contentName": "text.Formula2",
+          "contentName": "text.formula2",
           "end": "(\\w+)",
           "endCaptures": {
             "1": {
-              "name": "keyword.Formula2"
+              "name": "keyword.other.special-method.formula2"
             }
           }
         },
         {
-          "begin": "([\\x{003a}]\\s+)",
+          "begin": "([:]\\s+)",
           "beginCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           },
-          "contentName": "text.Formula2",
+          "contentName": "text.formula2",
           "end": "(\\w+)",
           "endCaptures": {
             "1": {
-              "name": "keyword.Formula2"
+              "name": "keyword.other.special-method.formula2"
             }
           }
         },
         {
           "match": "(,)",
-          "name": "punctuation.Formula2"
+          "name": "punctuation.formula2"
         }
       ]
     },
@@ -288,7 +288,7 @@
       "patterns": [
         {
           "match": "(extends|model|of|includes)",
-          "name": "keyword.Formula2"
+          "name": "keyword.other.special-method.formula2"
         }
       ]
     },
@@ -296,7 +296,7 @@
       "patterns": [
         {
           "match": "(atleast|atmost)",
-          "name": "keyword.Formula2"
+          "name": "keyword.other.special-method.formula2"
         }
       ]
     },
@@ -314,7 +314,7 @@
       "patterns": [
         {
           "match": "(no)",
-          "name": "keyword.Formula2"
+          "name": "keyword.other.special-method.formula2"
         },
         {
           "include": "#predicate"
@@ -327,14 +327,14 @@
           "begin": "(/\\*)",
           "beginCaptures": {
             "1": {
-              "name": "comment.Formula2"
+              "name": "comment.formula2"
             }
           },
-          "contentName": "comment.Formula2",
+          "contentName": "comment.formula2",
           "end": "(\\*/)",
           "endCaptures": {
             "1": {
-              "name": "comment.Formula2"
+              "name": "comment.formula2"
             }
           }
         }
@@ -347,7 +347,7 @@
       "patterns": [
         {
           "match": "(\\b\\d+)",
-          "name": "constant.numeric.Formula2"
+          "name": "constant.numeric.formula2"
         }
       ]
     },
@@ -357,7 +357,7 @@
           "begin": "(\\{)",
           "beginCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           },
           "patterns": [
@@ -365,10 +365,10 @@
               "include": "#predicate__1"
             }
           ],
-          "end": "([\\x{007d}])",
+          "end": "([}])",
           "endCaptures": {
             "1": {
-              "name": "punctuation.Formula2"
+              "name": "punctuation.formula2"
             }
           }
         }
@@ -378,11 +378,11 @@
       "patterns": [
         {
           "match": "(no|is)",
-          "name": "keyword.Formula2"
+          "name": "keyword.other.special-method.formula2"
         },
         {
-          "match": "([\\x{007c}])",
-          "name": "punctuation.Formula2"
+          "match": "([|])",
+          "name": "punctuation.formula2"
         },
         {
           "include": "#list"

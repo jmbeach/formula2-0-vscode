@@ -107,7 +107,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.Formula2</string>
+              <string>keyword.other.special-method.Formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -136,7 +136,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.Formula2</string>
+              <string>keyword.other.special-method.Formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -165,7 +165,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.Formula2</string>
+              <string>keyword.other.special-method.Formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -194,7 +194,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.Formula2</string>
+              <string>keyword.other.special-method.Formula2</string>
             </dict>
           </dict>
           <key>contentName</key>
@@ -218,7 +218,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.Formula2</string>
+              <string>keyword.other.special-method.Formula2</string>
             </dict>
           </dict>
           <key>patterns</key>
@@ -312,7 +312,7 @@
           <key>match</key>
           <string>\b(system|machine|ensures|requires|conforms|includes|returns|some|at|initially|next|property|boot|new|inj|sur|fun|any|sub|bij)</string>
           <key>name</key>
-          <string>keyword.Formula2</string>
+          <string>keyword.other.special-method.Formula2</string>
         </dict>
         <dict>
           <key>include</key>
@@ -379,7 +379,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.Formula2</string>
+              <string>keyword.other.special-method.Formula2</string>
             </dict>
           </dict>
         </dict>
@@ -403,7 +403,7 @@
             <key>1</key>
             <dict>
               <key>name</key>
-              <string>keyword.Formula2</string>
+              <string>keyword.other.special-method.Formula2</string>
             </dict>
           </dict>
         </dict>
@@ -451,7 +451,7 @@
           <key>match</key>
           <string>(extends|model|of|includes)</string>
           <key>name</key>
-          <string>keyword.Formula2</string>
+          <string>keyword.other.special-method.Formula2</string>
         </dict>
        </array>
     </dict>
@@ -463,7 +463,7 @@
           <key>match</key>
           <string>(atleast|atmost)</string>
           <key>name</key>
-          <string>keyword.Formula2</string>
+          <string>keyword.other.special-method.Formula2</string>
         </dict>
        </array>
     </dict>
@@ -491,7 +491,7 @@
           <key>match</key>
           <string>(no)</string>
           <key>name</key>
-          <string>keyword.Formula2</string>
+          <string>keyword.other.special-method.Formula2</string>
         </dict>
         <dict>
           <key>include</key>
@@ -590,7 +590,7 @@
           <key>match</key>
           <string>(no|is)</string>
           <key>name</key>
-          <string>keyword.Formula2</string>
+          <string>keyword.other.special-method.Formula2</string>
         </dict>
         <dict>
           <key>match</key>
