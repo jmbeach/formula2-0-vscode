@@ -1,0 +1,25 @@
+{
+    "name": "formula2-0",
+    "displayName": "formula2.0",
+    "description": "Formula 2.0 Language",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.68.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "formula2.0",
+            "aliases": ["Formula 2.0", "formula2.0"],
+            "extensions": [".4ml"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "formula2.0",
+            "scopeName": "formula",
+            "path": "./syntaxes/formula2.0.tmLanguage.json"
+        }]
+    }
+}

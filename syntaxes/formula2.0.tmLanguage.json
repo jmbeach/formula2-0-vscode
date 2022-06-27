@@ -1,0 +1,393 @@
+{
+  "fileTypes": [
+    "4ml"
+  ],
+  "name": "Formula2",
+  "patterns": [
+    {
+      "include": "#main"
+    }
+  ],
+  "scopeName": "source.Formula2",
+  "uuid": "4aca15d3-1347-46bd-b94a-e61f0d833f58",
+  "repository": {
+    "main": {
+      "patterns": [
+        {
+          "include": "#numeric"
+        },
+        {
+          "begin": "(\\{)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#main__1"
+            }
+          ],
+          "end": "(\\})",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          }
+        },
+        {
+          "match": "(;)",
+          "name": "punctuation.Formula2"
+        },
+        {
+          "begin": "(\\\")",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          },
+          "contentName": "text.Formula2",
+          "end": "(\\\")",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          }
+        },
+        {
+          "include": "#multi_line_comment"
+        },
+        {
+          "match": "(//.*)",
+          "name": "comment.Formula2"
+        },
+        {
+          "begin": "(domain|partial|model)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.Formula2"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#main__3"
+            }
+          ],
+          "end": "($)",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          }
+        },
+        {
+          "begin": "(requires)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.Formula2"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#main__4"
+            }
+          ],
+          "end": "(\\.)",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          }
+        },
+        {
+          "begin": "(transform)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.Formula2"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#main__5"
+            }
+          ],
+          "end": "($)",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          }
+        },
+        {
+          "begin": "(returns)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.Formula2"
+            }
+          },
+          "contentName": "text.Formula2",
+          "end": "(\\))",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          }
+        },
+        {
+          "begin": "(conforms)",
+          "beginCaptures": {
+            "1": {
+              "name": "keyword.Formula2"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#main__7"
+            }
+          ],
+          "end": "(\\.)",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          }
+        },
+        {
+          "include": "#expression"
+        },
+        {
+          "match": "([^\\s])",
+          "name": "invalid.Formula2"
+        }
+      ]
+    },
+    "expression": {
+      "patterns": [
+        {
+          "begin": "(\\b\\w[\\w\\d]*\\b)",
+          "beginCaptures": {
+            "1": {
+              "name": "text.Formula2"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#expression__1"
+            }
+          ],
+          "end": "(\\.)",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          }
+        }
+      ]
+    },
+    "expression__1": {
+      "patterns": [
+        {
+          "match": "([\\x{003a}]{2}=|\\+|[\\x{003a}]-|!=)",
+          "name": "keyword.operator.Formula2"
+        },
+        {
+          "match": "(\\w+[\\w\\d]*)",
+          "name": "text.Formula2"
+        },
+        {
+          "match": "([\\x{002c}\\x{007c}])",
+          "name": "punctuation.Formula2"
+        },
+        {
+          "match": "\\b(system|machine|ensures|requires|conforms|includes|returns|some|at|initially|next|property|boot|new|inj|sur|fun|any|sub|bij)",
+          "name": "keyword.Formula2"
+        },
+        {
+          "include": "#list"
+        }
+      ]
+    },
+    "list": {
+      "patterns": [
+        {
+          "begin": "(\\()",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#list__1"
+            }
+          ],
+          "end": "(\\))",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          }
+        }
+      ]
+    },
+    "list__1": {
+      "patterns": [
+        {
+          "begin": "([\\x{003a}]{2}\\s+)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          },
+          "contentName": "text.Formula2",
+          "end": "(\\w+)",
+          "endCaptures": {
+            "1": {
+              "name": "keyword.Formula2"
+            }
+          }
+        },
+        {
+          "begin": "([\\x{003a}]\\s+)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          },
+          "contentName": "text.Formula2",
+          "end": "(\\w+)",
+          "endCaptures": {
+            "1": {
+              "name": "keyword.Formula2"
+            }
+          }
+        },
+        {
+          "match": "(,)",
+          "name": "punctuation.Formula2"
+        }
+      ]
+    },
+    "list__2": {
+      "patterns": []
+    },
+    "list__3": {
+      "patterns": []
+    },
+    "main__1": {
+      "patterns": [
+        {
+          "include": "#main"
+        }
+      ]
+    },
+    "main__2": {
+      "patterns": []
+    },
+    "main__3": {
+      "patterns": [
+        {
+          "match": "(extends|model|of|includes)",
+          "name": "keyword.Formula2"
+        }
+      ]
+    },
+    "main__4": {
+      "patterns": [
+        {
+          "match": "(atleast|atmost)",
+          "name": "keyword.Formula2"
+        }
+      ]
+    },
+    "main__5": {
+      "patterns": [
+        {
+          "include": "#list"
+        }
+      ]
+    },
+    "main__6": {
+      "patterns": []
+    },
+    "main__7": {
+      "patterns": [
+        {
+          "match": "(no)",
+          "name": "keyword.Formula2"
+        },
+        {
+          "include": "#predicate"
+        }
+      ]
+    },
+    "multi_line_comment": {
+      "patterns": [
+        {
+          "begin": "(/\\*)",
+          "beginCaptures": {
+            "1": {
+              "name": "comment.Formula2"
+            }
+          },
+          "contentName": "comment.Formula2",
+          "end": "(\\*/)",
+          "endCaptures": {
+            "1": {
+              "name": "comment.Formula2"
+            }
+          }
+        }
+      ]
+    },
+    "multi_line_comment__1": {
+      "patterns": []
+    },
+    "numeric": {
+      "patterns": [
+        {
+          "match": "(\\b\\d+)",
+          "name": "constant.numeric.Formula2"
+        }
+      ]
+    },
+    "predicate": {
+      "patterns": [
+        {
+          "begin": "(\\{)",
+          "beginCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          },
+          "patterns": [
+            {
+              "include": "#predicate__1"
+            }
+          ],
+          "end": "([\\x{007d}])",
+          "endCaptures": {
+            "1": {
+              "name": "punctuation.Formula2"
+            }
+          }
+        }
+      ]
+    },
+    "predicate__1": {
+      "patterns": [
+        {
+          "match": "(no|is)",
+          "name": "keyword.Formula2"
+        },
+        {
+          "match": "([\\x{007c}])",
+          "name": "punctuation.Formula2"
+        },
+        {
+          "include": "#list"
+        }
+      ]
+    }
+  }
+}
