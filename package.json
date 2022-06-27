@@ -21,5 +21,9 @@
             "scopeName": "source.formula2",
             "path": "./syntaxes/formula2.tmLanguage.json"
         }]
-    }
+    },
+    "repository": {
+        "url": "https://github.com/jmbeach/formula2-0-vscode"
+    },
+    "publisher": "jmbeach"
 }
